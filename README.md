@@ -13,7 +13,7 @@ Program difungsikan untuk menghitung dan menampilkan jumlah permutasi dan kombin
 
    Di sini, variabel `a`, `b`, `c`, `d`, dan `hasil` dideklarasikan sebagai `int`, dan program menerima input dari user menggunakan `fmt.Scan()`.
 
-2. **Fungsi `factorial` untuk menghitung faktorial**:
+2. **Procedure `factorial` untuk menghitung faktorial**:
    ```go
    func factorial(n int, hasil *int) {
        var factorial int = 1
@@ -24,9 +24,9 @@ Program difungsikan untuk menghitung dan menampilkan jumlah permutasi dan kombin
    }
    ```
 
-   Fungsi diatas menghitung faktorial dari nilai `n` dengan cara mengalikan nilai dari `n` sampai 1, kemudian hasilnya disimpan dalam pass by reference `hasil`.
+   Procedure diatas menghitung faktorial dari nilai `n` dengan cara mengalikan nilai dari `n` sampai 1, kemudian hasilnya disimpan dalam pass by reference `hasil`.
 
-3. **Fungsi `permutation` untuk menghitung permutasi**:
+3. **Procedure `permutation` untuk menghitung permutasi**:
    ```go
    func permutation(n, r int, hasil *int) {
        var nfactorial, nrfactorial int
@@ -37,9 +37,9 @@ Program difungsikan untuk menghitung dan menampilkan jumlah permutasi dan kombin
    }
    ```
 
-   Fungsi diatas menghitung permutasi dengan memanggil fungsi `factorial` untuk menghitung `n!` dan `(n-r)!`, lalu membagi hasilnya untuk mendapatkan permutasi.
+   Procedure diatas menghitung permutasi dengan memanggil procedure `factorial` untuk menghitung `n!` dan `(n-r)!`, lalu membagi hasilnya untuk mendapatkan permutasi.
 
-4. **Fungsi `combination` untuk menghitung kombinasi**:
+4. **Procedure `combination` untuk menghitung kombinasi**:
    ```go
    func combination(n, r int, hasil *int) {
        var nfactorial, rnrfactorial, rnrfactorial2 int
@@ -51,7 +51,7 @@ Program difungsikan untuk menghitung dan menampilkan jumlah permutasi dan kombin
    }
    ```
 
-   Fungsi diatas menghitung kombinasi dengan memanggil `factorial` untuk `n!`, `r!`, dan `(n-r)!`, lalu menggunakan rumus kombinasi \( C(n, r) = \frac{n!}{r!(n-r)!} \).
+   Procedure diatas menghitung kombinasi dengan memanggil `factorial` untuk `n!`, `r!`, dan `(n-r)!`, lalu menggunakan rumus kombinasi \( C(n, r) = \frac{n!}{r!(n-r)!} \).
 
 ---
 
@@ -59,7 +59,7 @@ Program difungsikan untuk menghitung dan menampilkan jumlah permutasi dan kombin
 ### Program Penentuan Pemenang Berdasarkan Skor Waktu Pengerjaan Soal
 Program difungsikan untuk mencari pemenang berdasarkan jumlah soal yang dijawab benar dalam waktu kurang dari atau sama dengan 300 detik. Jika dua peserta menjawab jumlah soal yang sama, peserta dengan waktu total lebih sedikit yang menang.
 
-### 1. **Deklarasi Konstanta dan Fungsi `hitungSkor`**:
+### 1. **Deklarasi Konstanta dan Procedure `hitungSkor`**:
    ```go
    const jumlahSoal = 8
 
@@ -75,7 +75,7 @@ Program difungsikan untuk mencari pemenang berdasarkan jumlah soal yang dijawab 
    }
    ```
    - **Konstanta `jumlahSoal`**: Menentukan jumlah soal tetap, yaitu 8.
-   - **Fungsi `hitungSkor`**: Menghitung total soal yang dijawab benar (waktu <= 300 detik) dan menjumlahkan skor total (jumlah waktu yang dihabiskan). Hasilnya disimpan dalam pass by reference `totalSoal` dan `totalSkor`.
+   - **Procedure `hitungSkor`**: Menghitung total soal yang dijawab benar (waktu <= 300 detik) dan menjumlahkan skor total (jumlah waktu yang dihabiskan). Hasilnya disimpan dalam pass by reference `totalSoal` dan `totalSkor`.
    - **Logika dalam `for`**: Jika waktu pengerjaan soal (`soal[i]`) kurang dari atau sama dengan 300, maka soal dihitung sebagai benar dan nilainya ditambahkan ke skor total.
 
 ### 2. **Bagian `main`**:
@@ -134,7 +134,7 @@ Program difungsikan untuk mencari pemenang berdasarkan jumlah soal yang dijawab 
 ### Program Sklena
 Program bertujuan untuk mencetak deret angka sesuai dengan aturan Sklena, yaitu transformasi bilangan dengan aturan tertentu hingga mencapai angka 1.
 
-### 1. **Konstanta dan Fungsi `cetakDeret`**:
+### 1. **Konstanta dan Procedure `cetakDeret`**:
    ```go
    const maxDeret = 100
    ```
@@ -150,7 +150,7 @@ Program bertujuan untuk mencetak deret angka sesuai dengan aturan Sklena, yaitu 
        var deret [maxDeret]int
        index := 0
    ```
-   - **Validasi input**: Jika input `n` kurang dari atau sama dengan 0 atau lebih besar dari 1 juta, program akan menampilkan pesan kesalahan dan keluar dari fungsi.
+   - **Validasi input**: Jika input `n` kurang dari atau sama dengan 0 atau lebih besar dari 1 juta, program akan menampilkan pesan kesalahan dan keluar dari procedure.
    - **Deklarasi array `deret`**: Array berukuran 100 ini menyimpan hasil deret Collatz.
    - **`index`**: Variabel ini melacak posisi dalam array saat deret angka dibentuk.
 
@@ -197,5 +197,5 @@ Program bertujuan untuk mencetak deret angka sesuai dengan aturan Sklena, yaitu 
        cetakDeret(n)
    }
    ```
-   - Program meminta input user (`n`), lalu memanggil fungsi `cetakDeret` untuk menghitung dan mencetak deret berdasarkan nilai input.
+   - Program meminta input user (`n`), lalu memanggil procedure `cetakDeret` untuk menghitung dan mencetak deret berdasarkan nilai input.
 
